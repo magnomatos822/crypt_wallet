@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class CoinsController < ApplicationController
-  before_action :set_coin, only: [:show, :edit, :update, :destroy]
+  before_action :set_coin, only: %i[show edit update destroy]
 
   # GET /coins
   # GET /coins.json
@@ -9,8 +11,7 @@ class CoinsController < ApplicationController
 
   # GET /coins/1
   # GET /coins/1.json
-  def show
-  end
+  def show; end
 
   # GET /coins/new
   def new
@@ -18,8 +19,7 @@ class CoinsController < ApplicationController
   end
 
   # GET /coins/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /coins
   # POST /coins.json
@@ -62,13 +62,14 @@ class CoinsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_coin
-      @coin = Coin.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def coin_params
-      params.require(:coin).permit(:description, :acronym, :url_image)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_coin
+    @coin = Coin.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def coin_params
+    params.require(:coin).permit(:description, :acronym, :url_image)
+  end
 end

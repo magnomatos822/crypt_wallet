@@ -17,7 +17,7 @@
     <tr>
       <td><%= coin.description %></td>
       <td><%= coin.acronym %></td>
-      <td><%= coin.url_image %></td>
+      <td><img src="<%= coin.url_image %>" alt="icones" width="30" height="30"></td>
       <td><%= link_to 'Exibir', coin %></td>
       <td><%= link_to 'Editar', edit_coin_path(coin) %></td>
       <td>
