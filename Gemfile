@@ -25,7 +25,10 @@ gem 'redis', '~> 4.0'
 # gem 'bcrypt', '~> 3.1.7'
 # gem 'pg'
 gem 'rubocop'
+
 gem 'rails_admin'
+
+gem 'prettier'
 
 gem 'graphql'
 
