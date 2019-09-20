@@ -17,12 +17,14 @@
     <tr>
       <td><%= coin.description %></td>
       <td><%= coin.acronym %></td>
-      <td><img src="<%= coin.url_image %>" alt="icones" width="30" height="30"></td>
+      <td>
+        <img src="<%= coin.url_image %>" alt="icones" width="30" height="30" />
+      </td>
       <td><%= link_to 'Exibir', coin %></td>
       <td><%= link_to 'Editar', edit_coin_path(coin) %></td>
       <td>
-        <%= link_to 'Deletar', coin, method: :delete, data: { confirm: 'Are you
-        sure?' } %>
+        <%= link_to 'Deletar', coin, method: :delete, data: { confirm: 'Deseja
+        excluir?' } %>
       </td>
     </tr>
     <% end %>
@@ -31,4 +33,4 @@
 
 <br />
 
-<%= link_to 'New Coin', new_coin_path %>
+<%= link_to 'Nova Moeda', new_coin_path %>
