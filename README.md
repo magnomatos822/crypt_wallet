@@ -21,4 +21,5 @@ Things you may want to cover:
 
 * Deployment instructions
 
+Arquivo de teste de assinatura
 * ...
